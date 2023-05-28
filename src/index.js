@@ -7,6 +7,8 @@ const socketio = require('socket.io')
 const Filter = require('bad-words')
 require('./db/mongoose')
 const User = require('./models/user')
+require('dotenv').config();
+
 const {generateMessage, generateLocationMessage} = require('./utils/messages')
 const  { deleteRoomForUser, joinRoomForUser , getUsersInRoom} = require('./utils/users')
 
@@ -14,7 +16,7 @@ const app = express()
 const server = http.createServer(app)
 const io = socketio(server)
 
-const port = process.env.PORT || 3001
+const port = process.env.PORT
 const publicDirectoryPath = path.join(__dirname, '../public')
 
 app.use(express.static(publicDirectoryPath))

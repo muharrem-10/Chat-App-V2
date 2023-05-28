@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
+require('dotenv').config();
 
-mongoose.connect('mongodb+srv://root:12345@cluster0.9oqkhso.mongodb.net/test', {
+mongoose.connect(process.env.MONGODB_URL, {
     dbName: 'chat-app'
 
 })

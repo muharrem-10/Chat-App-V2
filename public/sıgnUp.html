@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat app</title>
+        <link rel="icon" href="/img/favicon.png">
+        <link rel="stylesheet" href="/css/styles.min.css">
+    </head>
+    <body>
+        <div class="centered-form">
+            <div class="centered-form__box">
+                <h1>register user</h1>
+                <form id="sıgnup-form" action="/index.html">
+                    <label>name</label>
+                    <input id="username" type="text" name="username" placeholder="Display name" required>
+                    <label>email</label>
+                    <input id="email" type="text" name="email" placeholder="Email" required>
+                    <label>gender</label>
+                    <input id="gender" type="text" name="gender" placeholder="Gender" required>
+                    <label>age </label>
+                    <input id="age" type="text" name="age" placeholder="Age" required>
+                    <label>password</labels>
+                    <input id="password" type="text" name="password" placeholder="Password" required>
+                    <label>Room</label>
+                    <input id="room" type="text" name="room" placeholder="Room" required>
+                    <button>Create</button>
+                </form>
+            </div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/sıgnUp.js"></script>
+    </body>
+</html>
